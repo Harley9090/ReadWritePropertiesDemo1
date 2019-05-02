@@ -4,6 +4,7 @@
 // Notes: 
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -29,7 +30,15 @@ namespace FormFrontEnd
             }
             set
             {
-                colour = value;
+                //validation for colors that are accepted
+                if (value.ToUpper() == "RED" || value.ToUpper() == "BLUE")
+                {
+                    colour = value;
+                }
+                else
+                {
+                    throw new DataException("Colour must be red or blue");
+                }
             }
         }
 
