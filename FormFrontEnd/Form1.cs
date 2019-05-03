@@ -29,6 +29,7 @@ namespace FormFrontEnd
                 {
                     Colour = txtColor.Text.Trim(),
                     Diameter = Convert.ToDouble(txtDiameter.Text),
+                    
                     Height = Convert.ToDouble(txtHeight.Text)
 
                             /*same as inside the new balloon*/
